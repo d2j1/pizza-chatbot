@@ -1,0 +1,137 @@
+*{
+
+    margin: 0;
+    box-sizing:border-box ;
+    padding:0;
+    
+}
+
+body{
+ 
+}
+
+
+#name,#contact,#address{
+  width: 55%;
+}
+#main-div{
+
+    width: auto;
+    height: 10%;
+
+     display: flex;
+        flex-direction: row;
+
+        align-items: center;
+    
+
+}
+
+#user-input{
+
+    width: 80%;
+    height: 80%;
+    font-size: x-large;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    border-radius: 30px 30px 30px 30px;
+    outline:none;
+    background: rgb(151, 145, 145);
+    color: white;
+    
+
+}
+
+button{
+ font-size: large;
+ margin: 3px;
+    width:19%;
+    height: 90% ;
+    border:none;
+    color: rgb(8, 6, 6);
+    padding: 1%;
+    cursor: pointer;
+    outline: none;
+    background: pink;
+    
+    border-radius: 30px 30px 30px 30px;
+}
+#messages{
+
+    height: 80%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.chatbot{
+  background:rgb(221, 70, 95);
+    padding: 2%;
+    margin: 1%;
+    float: left;
+    width: 60%;
+    border-radius: 10px;
+    color : rgb(255, 255, 255);
+     font-size: larger;
+     font-weight: 500;
+}
+
+.user{
+    background: #05a127; 
+    margin: 1%;
+     padding: 2%;
+    float: right;
+     width: 60%;
+     border-radius: 10px;
+     color : rgb(255, 255, 255);
+     font-size: larger;
+     font-weight: 500;
+}
+
+#head{
+    height: 10%;
+    font-size: larger;
+    
+    background-color: brown;
+    color: white;
+    margin: 0%;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+    
+}
+
+#head-icon{
+    padding:4px;
+    margin: 3px;
+}
+#head-name{
+     padding:5px;
+     margin: 3px;;
+    
+}
+
+
+/* for scroll bar*/
+
+::-webkit-scrollbar {
+  width: 3px;
+ 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(30, 31, 30); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(96, 114, 96); 
+}

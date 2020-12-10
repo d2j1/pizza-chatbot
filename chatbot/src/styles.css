@@ -1,0 +1,288 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@700&display=swap');
+
+*{
+  
+  font-family: 'Padauk', sans-serif !important;
+   
+}
+
+
+#name,#contact,#address,#orderId{
+  width: 55%;
+  float:right;
+}
+
+
+#container{
+
+  
+  margin: 3% 30% 0% 30%;
+  padding: 0%;
+  height: 500px;
+ 
+  background-image: url(./assets/pizza.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+ 
+}
+
+.chatbot{
+  background:rgb(221, 70, 95);
+    padding: 2%;
+    margin: 1%;
+    float: left;
+    width: 60%;
+    border-radius:10px;
+    color : rgb(255, 255, 255);
+     font-size: larger;
+     font-weight: 500;
+}
+
+.user{
+    background: #05a127; 
+    margin: 1%;
+     padding: 2%;
+    float: right;
+     width: 60%;
+     border-radius:10px;
+     color : rgb(255, 255, 255);
+     font-size: larger;
+     font-weight: 500;
+}
+
+.btn{
+    border: solid 1px ;
+    border-radius: 9px;
+    border-color: black;
+    background: #dd5d08;
+    float: right;
+    width: 55%;
+    padding: 2%;
+    margin: 1.5%;
+    cursor: pointer;
+    font-size: larger;
+     font-weight: 500;
+
+}
+
+.btn:hover{
+   border: solid 1px ;
+    border-radius: 9px;
+    border-color: black;
+    background: #5c2602;
+    float: right;
+    width: 55%;
+    padding: 2%;
+    margin: 1.5%;
+    cursor: pointer;
+    font-size: larger;
+     font-weight: 500;
+     color: white;
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@700&display=swap');
+/* *{
+    margin: 0;
+    box-sizing: border-box;
+  
+  font-family: 'Padauk', sans-serif !important;
+   
+}
+
+#massage{
+    width: 50%;
+    margin-left: 20%;
+}
+#img{
+    width: 5%;
+}
+#img{
+    width: 20%;
+    position: absolute;
+    margin-left: -63%;
+    margin-top: 7%;
+}
+#img1{
+    width: 20%;
+    position: absolute;
+    margin-left: 18%;
+    margin-top: 10%;
+   
+}
+input[type=text]{
+    font-size: large;
+     width: 70%;
+     background-color: antiquewhite;
+  }
+#form__input {
+   height: 50px;
+   
+   margin-left: 6%;
+
+  }
+  button {
+    width: 25%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 8px;
+       
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.user-area, .chatbot-area {
+    width: 20%;
+    height: calc(100vh - 60px);
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 80px;
+    z-index: 99999;
+}
+.chatbot-area {
+    float: right;
+    right: 80px;
+    left: auto;
+}
+.user-area img, .chatbot-area img {
+    width: 100%;
+}
+.user-area img{left: 0;}
+.chatarea-main {
+    width: 42%;
+    margin: 0 auto;
+}
+.chatarea-outer {
+    width: 100%;
+    float: left;
+}
+.chatbot-area .chatarea-main{float: left;}
+.chatarea.user {
+    float: right;
+    width: 40%;
+    padding: 20px 0;
+}
+
+.chatarea-inner {
+    float: left;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    width: 60%;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    margin: 5px 0;
+}
+.chatarea-inner.user{
+    background:rgb(221, 70, 95);
+}
+.chatarea-inner.chatbot{
+    background: #05a127;
+    float: right;
+}
+
+/*
+.chatarea-inner.user:before {
+    content: '';
+    position: absolute;
+    border-right: 20px solid rgb(221, 70, 95);
+    border-top: 20px solid transparent;
+    border-bottom: 0px solid transparent;
+    bottom: 0;
+    left: -20px;
+}
+.chatarea-inner.chatbot:before {
+    content: '';
+    position: absolute;
+    border-left: 20px solid #05a127;
+    border-top: 20px solid transparent;
+    border-bottom: 0px solid transparent;
+    bottom: 0;
+    right: -20px;
+}
+
+
+.chatbot-area .chatarea-inner{float: left;}
+
+.chatarea-inner.btn{
+    border: solid 1px ;
+    border-color: black;
+    background: #dd5d08;
+    float: right;
+}
+
+#main-div{
+
+    width: auto;
+    margin-top: 0%;
+    padding-top: none;
+      border-bottom: #05a127 6px solid;
+    border-left:  #05a127 6px solid;
+     border-right:  #05a127 6px solid;
+
+}
+
+#main-outer-div{
+
+    
+    width: 50%;
+    
+   
+    padding: 5%;
+    
+    height: 60px;
+   margin-top: 0%;
+    margin-bottom: 3%;
+    margin-left: 25%;
+    margin-right:25% ;
+   
+}
+#messages{
+
+   width: auto;
+    height: 350px;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+     
+    border-top: #05a127 30px solid;
+    border-left:  #05a127 6px solid;
+     border-right:  #05a127 6px solid;
+
+}
+
+
+// for scroll bar
+
+::-webkit-scrollbar {
+  width: 3px;
+ 
+}
+
+ //Track 
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+
+
+// Handle 
+::-webkit-scrollbar-thumb {
+  background: rgb(30, 31, 30); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(96, 114, 96); 
+}
+
+
+
+*/
