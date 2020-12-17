@@ -39,50 +39,35 @@ public stat:status;
   
 message(message:any){
     this.data=message.split(' ');
-console.log(this.data);
 (<HTMLInputElement>document.getElementById('user-input')).value='';
 
 if(message=='')
 alert("please enter question");
 
-
+var tempi,tempj,temp=false;
     this.api.getMessage().subscribe(data=>{
       this.databaseData=data;
-      console.log(data);
 
       for(let i=0;i<this.data.length;i++){
         for(let j=0;j<this.databaseData.length;j++){
 
           if(this.data[i]==this.databaseData[j].question){
+            temp=true;
+              tempj=j;
+              tempi=i;
+              break;
 
-
-            this.removeElementall(1,i,j);
-           /* for(let m=0;m<4;m++){
-          this.removeElement();
+            
+          
         }
-
-              this.createMessage("user",this.data[i]);
-              
-       
-          this.createMessage("chatbot",this.databaseData[j].answer);
-         this.buttonCreator(this.entryOptions,1);
         
-         */
-        }
-        else{
-              this.removeElementall(2,0,0);
-
-          /*
-          for(let m=0;m<4;m++){
-          this.removeElement();
-        }
-          this.createMessage("chatbot","What!!!! Sorry I didn't understand");
-          this.createMessage("chatbot","How can i help you?");
-         this.buttonCreator(this.entryOptions,1);
-
-         */
-        }
       }
+      }
+
+      if(temp)
+      this.removeElementall(1,tempi,tempj);
+      else{
+          this.removeElementall(2,0,0);
       }
     },error=>console.log(error));
   }
@@ -133,20 +118,7 @@ removeElementall(k:number,i:number,j:number){
 
 
   //function to create messages and append to "messages" parent tag 
-  /* createMessage(userName:string,message1:string){
-
- var userinput=document.createElement('div');
-          userinput.className="chatarea-inner "+userName;
-          userinput.innerHTML=message1;
-         // userinput.id="user";
-          document.getElementById('messages').appendChild(userinput);
-
-  } */ 
-
-
-
   
-
 
     createMessage(userName:string,message1:string){
 
@@ -186,7 +158,7 @@ entryOptions3=["Order Another Pizza","Confirm Order"];
     //function to process first options list i.e. order pizza , track your order options 
         functionwithparam(i:any){
        if(i==0){
-       /******* */ 
+      
 this.removeElement();
 this.removeElement();
 this.removeElement();
@@ -220,11 +192,8 @@ this.removeElement();
 
           this.createMessage("user","Veg Pizza");
           this.buttonCreatorVeg();
-         console.log("for veg pizza");
 
          
-       // this.massagedetail()
-       // this. buttonnew1()
        }
        else if(i==1){
 
@@ -234,7 +203,6 @@ this.removeElement();
         this.createMessage("user","Non Veg Pizza");
         this.buttonCreatorNonVeg();
 
-        console.log("for non veg pizza"); 
        }
       }
 
@@ -258,7 +226,6 @@ functionwithparam3(i:number,type:string){
   var str='<b>'+this.nonVegPizzaList[i].name+'</b><br>  Price: '+this.nonVegPizzaList[i].price+'</p>';
   this.createMessage('user',str);
   this.cart.push(this.nonVegPizzaList[i]);
-      console.log(this.cart);
     }
 
     this.buttonCreator(this.entryOptions3,3);
@@ -428,14 +395,9 @@ this.userInfo[0]=name;
     
 
   
-      console.log("User Details"+ name, contactNo,address);
+     
     this.removeElementById('mainUserInputDiv');
-    
-    /*this.removeElementById('contact');
-    
-    this.removeElementById('address');
-    this.removeElement();
-*/
+
     //To print user details
       var str ="Your Details: "+'<br> Name: <b>'+this.userInfo[0]+'</b><br> Contact No: <b>'+this.userInfo[1]+'</b><br> Address: <b>'+this.userInfo[2]+'</b>'
       this.createMessage("chatbot",str);
@@ -456,12 +418,11 @@ this.userInfo[0]=name;
               this.cart=[];
             this.createMessage("chatbot" ,  " Your Order is placed successfully <br> Thank you ");
 
-            /************************************/
+           
            this.api.putUserDetailsInDatabase(this.userInfo[0],Number(this.userInfo[1]),this.userInfo[2]).subscribe( data =>{
           
         },
         error => console.log(error));
-           /******************************* */
            //to put order id and status in database
            this.api.putOrderStatusinDatabase(Number(orderId),"Order Dispatched").subscribe( data =>{
         },
@@ -498,7 +459,7 @@ this.userInfo[0]=name;
   takeOrderId(){
     var orderId=(<HTMLInputElement>document.getElementById('orderId')).value;
     this.removeElementById("mainOrderInputDiv");
-    console.log(orderId);
+   
      var temp=null;
     this.api.getOrderStatus(orderId).subscribe(data=>{
       temp=data;
@@ -519,14 +480,6 @@ this.userInfo[0]=name;
       },error=>console.log(error));
       
 
-
-
-    
-
-     
-
-        
-     
   }
 
 }
