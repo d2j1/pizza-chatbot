@@ -34,7 +34,7 @@ putOrderStatusinDatabase(orderId:number,status1:string){
   return this.http.post(`${this.orderStatus}`,obj);
 }
   getOrderStatus(orderId){
-    console.log('order id in services'+orderId);
+   
        var url=this.orderStatus+'?orderid='+orderId;
 
      return this.http.get(`${url}`);
